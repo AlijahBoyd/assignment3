@@ -1,0 +1,198 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 170px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #34251d;
+    background-color: #fff8f0;
+}
+
+/* Sticky header with shadow */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #6f4e37;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 4px 0 0;
+}
+
+/* Navigation links and hover effect */
+nav {
+    position: sticky;
+    top: 118px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+    background-color: #8b5e3c;
+}
+
+nav a {
+    padding: 6px 12px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #4b2e1f;
+    background-color: #ffd699;
+}
+
+/* Centered main content using Flexbox */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: min(100% - 32px, 960px);
+    margin: 32px auto;
+}
+
+section {
+    width: 100%;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(73, 47, 30, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #6f4e37;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.menu-card {
+    flex: 1 1 200px;
+    padding: 16px;
+    background-color: #fff1df;
+    border-left: 4px solid #b87948;
+    border-radius: 8px;
+}
+
+.menu-card h3 {
+    margin-top: 0;
+    color: #6f4e37;
+}
+
+/* Footer matches the header */
+footer {
+    margin-top: 32px;
+    padding: 18px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #6f4e37;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Adjust layout for phones */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        top: 108px;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 6px 8px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
+
+
+/* Day/Night Mode button */
+#themeButton {
+    margin-top: 10px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 6px;
+    color: #34251d;
+    background-color: #ffd699;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#themeButton:hover {
+    background-color: #ffffff;
+}
+
+/* Night Mode styles added by JavaScript */
+body.dark-mode {
+    color: #f5f5f5;
+    background-color: #222222;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #111111;
+}
+
+body.dark-mode nav {
+    background-color: #333333;
+}
+
+body.dark-mode section {
+    background-color: #333333;
+}
+
+body.dark-mode h2,
+body.dark-mode .menu-card h3 {
+    color: #ffd699;
+}
+
+body.dark-mode .menu-card {
+    background-color: #444444;
+    border-left-color: #d69a62;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a:focus {
+    color: #222222;
+    background-color: #ffd699;
+}
